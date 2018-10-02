@@ -1,12 +1,26 @@
+body {
+  background-color: #b3b3b3;
+}
+
+h1, h2, p {
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 1.25rem 0;
 }
 
 .header-spacing, .generate-btn {
   width: 8rem;
-  margin: 0 4%;
+  margin: 0 8%;
 }
 
 .generate-btn {
@@ -31,26 +45,6 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-}
-
-.palette-one {
-  background-color: #ff0000;
-}
-
-.palette-two {
-  background-color: #0000ff;
-}
-
-.palette-three {
-  background-color: #ff0000;
-}
-
-.palette-four {
-  background-color: #0000ff;
-}
-
-.palette-five {
-  background-color: #ff0000;
 }
 
 .lock-img {
@@ -86,7 +80,9 @@ header {
 
 .form-container {
   height: 50vh;
-  width: 37.5%;
+  width: 35%;
+  border-right: 1px solid white;
+  padding-right: 2.5%;
 }
 
 .save-palette {
@@ -98,6 +94,7 @@ header {
 
 .palette-name {
   width: 98%;
+  margin: 3vh 0 1.5vh 0;
 }
 
 .palette-spacing {
@@ -105,7 +102,7 @@ header {
   padding-bottom: 3rem;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid white;
   text-align: center;
   width: 100%;
 }
@@ -118,17 +115,19 @@ header {
   width: 50%;
 }
 
-.projects-container {
-  height: 50vh;
-  width: 37.5%;
+.save-project {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.project-header {
+  margin-top: 3rem;
+}
+
 .project-form {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 1rem;
   width: 100%;
 }
 
@@ -138,4 +137,13 @@ header {
 
 .save-project-btn {
   width: 20%;
+}
+
+.projects-container {
+  height: 50vh;
+  width: 35%;
+  display: flex;
+  margin-left: 2.5%;
+  flex-direction: column;
+  align-items: center;
 }
