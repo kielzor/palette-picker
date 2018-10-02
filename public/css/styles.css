@@ -12,6 +12,12 @@ header {
 .generate-btn {
   height: 3rem;
   border-radius: 10%;
+  outline: none;
+  color: white;
+}
+
+.generate-btn:hover {
+  cursor: pointer;
 }
 
 .generated-palettes {
@@ -47,12 +53,12 @@ header {
   background-color: #ff0000;
 }
 
-.locked-palette {
-  opacity: .5;
+.lock-img {
+  margin-bottom: 5%;
 }
 
-.lock-img, .locked-img {
-  margin-bottom: 5%;
+.lock-img:hover {
+  cursor: pointer;
 }
 
 .hide-png {
