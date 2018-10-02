@@ -1,12 +1,26 @@
+body {
+  background-color: #b3b3b3;
+}
+
+h1, h2, p {
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 1.25rem 0;
 }
 
 .header-spacing, .generate-btn {
   width: 8rem;
-  margin: 0 4%;
+  margin: 0 8%;
 }
 
 .generate-btn {
@@ -67,7 +81,7 @@ header {
 .form-container {
   height: 50vh;
   width: 35%;
-  border-right: 1px solid grey;
+  border-right: 1px solid white;
   padding-right: 2.5%;
 }
 
@@ -80,7 +94,7 @@ header {
 
 .palette-name {
   width: 98%;
-  margin-top: 3vh;
+  margin: 3vh 0 1.5vh 0;
 }
 
 .palette-spacing {
@@ -88,7 +102,7 @@ header {
   padding-bottom: 3rem;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid white;
   text-align: center;
   width: 100%;
 }
@@ -108,7 +122,7 @@ header {
 }
 
 .project-header {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
 }
 
 .project-form {
