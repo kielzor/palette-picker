@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class='header-spacing'></div>
+    <h1>Palette Picker</h1> 
+    <button class='generate-btn'>Generate Palette</button>
+  </header>
+  <section class='generated-palettes'>
+    <div class='palette palette-1'>
+      <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+      <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+    </div>
+    <div class='palette palette-2'>
+       <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+       <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+    </div>
+    <div class='palette palette-3'>
+      <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+      <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+    </div>
+    <div class='palette palette-4'>
+      <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+      <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+    </div>
+    <div class='palette palette-5'>
+      <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+      <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+    </div>
+  </section>
+  <section class='hex-codes'>
+    <p class='hex'>#ff0000</p>
+    <p class='hex'>#0000ff</p>
+    <p class='hex'>#ff0000</p>
+    <p class='hex'>#0000ff</p>
+    <p class='hex'>#ff0000</p>
+  </section>
+  <div class='bottom-section'>
+    <section class='form-container'>
+      <form class='save-palette'>
+        <h2>Save Palette From Above</h2>
+        <input class='palette-name' type="text" placeholder='Palette Name'>
+        <div class='palette-spacing'>
+          <select class='project-selector'>
+            <option>Select Project</option>
+          </select>
+          <button class='save-palette-btn'>Save</button>
+        </div>
+      </form>
+      <div class='save-project'>
+        <form class='project-form'>
+          <input class='project-name' type="text" placeholder='Project Name'>
+          <button class='save-project-btn'>Save</button>
+        </form>
+      </div> 
+    </section>
+    <section class='projects-container'>
+      <h2>Projects</h2>
+    </section>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src='./js/scripts.js'></script>
+</body>
+</html>

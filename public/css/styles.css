@@ -1,0 +1,135 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-spacing, .generate-btn {
+  width: 8rem;
+  margin: 0 4%;
+}
+
+.generate-btn {
+  height: 3rem;
+  border-radius: 10%;
+}
+
+.generated-palettes {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+}
+
+.palette {
+  width: 15%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.palette-one {
+  background-color: #ff0000;
+}
+
+.palette-two {
+  background-color: #0000ff;
+}
+
+.palette-three {
+  background-color: #ff0000;
+}
+
+.palette-four {
+  background-color: #0000ff;
+}
+
+.palette-five {
+  background-color: #ff0000;
+}
+
+.locked-palette {
+  opacity: .5;
+}
+
+.lock-img, .locked-img {
+  margin-bottom: 5%;
+}
+
+.hide-png {
+  display: none;
+}
+
+.hex-codes {
+  display: flex;
+  justify-content: center;
+}
+
+.hex {
+  align-items: center;
+  display: flex;
+  width: 15%;
+  justify-content: space-around;
+  margin: .25rem 0;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+.form-container {
+  height: 50vh;
+  width: 37.5%;
+}
+
+.save-palette {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.palette-name {
+  width: 98%;
+}
+
+.palette-spacing {
+  margin-top: .5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+  text-align: center;
+  width: 100%;
+}
+
+.project-selector {
+  width: 50%;
+}
+
+.save-palette-btn {
+  width: 50%;
+}
+
+.projects-container {
+  height: 50vh;
+  width: 37.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-form {
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.project-name {
+  width: 80%;
+}
+
+.save-project-btn {
+  width: 20%;
+}
