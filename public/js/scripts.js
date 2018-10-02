@@ -10,13 +10,14 @@ function toggleLock(e) {
 
 function changePalettes() {
   for (let i = 1; i < 6; i++) {
-    if ($('.palette-' + [i]).hasClass('locked')) return
-    let newColor = getRandomPalette()
+    let newColor = getRandomPalette(i)
     $('.palette-' + [i]).css('background-color', newColor)
   }
 }
 
-function getRandomPalette() {
+function getRandomPalette(i) {
+  if ($('.palette-' + i).hasClass('locked')) return
+
   let newColor = []
   for (let i = 0; i < 6; i++) {
     let randomInt = Math.random() * (9 - 0) + 0
