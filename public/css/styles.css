@@ -33,26 +33,6 @@ header {
   justify-content: center;
 }
 
-.palette-one {
-  background-color: #ff0000;
-}
-
-.palette-two {
-  background-color: #0000ff;
-}
-
-.palette-three {
-  background-color: #ff0000;
-}
-
-.palette-four {
-  background-color: #0000ff;
-}
-
-.palette-five {
-  background-color: #ff0000;
-}
-
 .lock-img {
   margin-bottom: 5%;
 }
@@ -86,7 +66,9 @@ header {
 
 .form-container {
   height: 50vh;
-  width: 37.5%;
+  width: 35%;
+  border-right: 1px solid grey;
+  padding-right: 2.5%;
 }
 
 .save-palette {
@@ -98,6 +80,7 @@ header {
 
 .palette-name {
   width: 98%;
+  margin-top: 3vh;
 }
 
 .palette-spacing {
@@ -118,17 +101,19 @@ header {
   width: 50%;
 }
 
-.projects-container {
-  height: 50vh;
-  width: 37.5%;
+.save-project {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.project-header {
+  margin-top: 2.5rem;
+}
+
 .project-form {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 1rem;
   width: 100%;
 }
 
@@ -138,4 +123,13 @@ header {
 
 .save-project-btn {
   width: 20%;
+}
+
+.projects-container {
+  height: 50vh;
+  width: 35%;
+  display: flex;
+  margin-left: 2.5%;
+  flex-direction: column;
+  align-items: center;
 }
