@@ -19,12 +19,14 @@ function changePalettes() {
 function getRandomPalette(i) {
   if ($('.palette-' + i).hasClass('locked')) return
 
-  let newColor = []
+  let color = []
 
   for (let i = 0; i < 6; i++) {
     let randomInt = Math.random() * (9 - 0) + 0
-    newColor.push(Math.round(randomInt))
+    color.push(Math.round(randomInt))
   }
+  let newColor = color.join('')
   
-  return `#${newColor.join('')}`
+  if (i) $('.hex-' + i)[0].innerText = `#${newColor}`
+  return `#${newColor}`
 }
