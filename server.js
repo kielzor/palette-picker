@@ -22,6 +22,12 @@ app.get('/', (request, response) => {
   response.send('Hello World!')
 })
 
+app.get('/api/v1/projects', (request, response) => {
+  database('projects').select()
+    .then(projects => response.status(200).json(projects))
+    .catch(error => response.status(500).json({ error }));
+});
+
 app.listen(app.get('port'), () => {
   console.log(`App is running on ${app.get('port')}`)
 })

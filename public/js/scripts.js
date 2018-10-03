@@ -2,6 +2,9 @@ $('.lock-img').on('click', toggleLock)
 $('.generate-btn').on('click', changePalettes)
 $('.save-project-btn').on('click', saveProject)
 $(window).on('load', changePalettes)
+$(window).on('load', retrieveProjects)
+
+// let projects = retrieveProjects()
 
 function toggleLock(e) {
   $(e.target).toggleClass('hide-png')
@@ -35,10 +38,9 @@ function getRandomPalette(i) {
 
 function saveProject(e) {
   e.preventDefault()
+
   const data = { name: $('.project-name').val() }
   
-  
-  console.log(data)
   fetch('http://localhost:3000/api/v1/projects', {
     method: 'POST',
     body: JSON.stringify(data),
@@ -46,6 +48,20 @@ function saveProject(e) {
       'Content-Type': 'application/json'
     }
   }).then(res => res.json())
-  .then(response => console.log('Success:', JSON.stringify(response)))
+  .then(response => JSON.stringify(response))
+  .then(() => retrieveProjects())
   .catch(error => console.error('Error:', error));
+
+  $('.project-name').val('')
+}
+
+function retrieveProjects() {
+  return fetch ('http://localhost:3000/api/v1/projects')
+  .then(res => res.json())
+  .then(response => populateProjectNames(response))
+  .catch(error => console.error('Error:', error));
+}
+
+function populateProjectNames (projects) { 
+  $('.project-selector').html(projects.map(project =>`<option>${project.name}</option>`))
 }
