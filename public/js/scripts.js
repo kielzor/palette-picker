@@ -22,10 +22,12 @@ function getRandomPalette(i) {
   let color = '#'
 
   for (let i = 0; i < 6; i++) {
-    let randomNum = Math.round(Math.random() * (9 - 0) + 0)
-    color = color + randomNum
+    let digits = '0123456789ABCDEF'
+    let randomInt = digits[Math.floor(Math.random() * 16)]
+    color = color + randomInt
   }
   
   if (i) $('.hex-' + i)[0].innerText = color
+  
   return color
 }
