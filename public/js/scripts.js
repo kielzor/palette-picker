@@ -1,5 +1,6 @@
 $('.lock-img').on('click', toggleLock)
 $('.generate-btn').on('click', changePalettes)
+$('.save-project-btn').on('click', saveProject)
 $(window).on('load', changePalettes)
 
 function toggleLock(e) {
@@ -30,4 +31,21 @@ function getRandomPalette(i) {
   if (i) $('.hex-' + i)[0].innerText = color
   
   return color
+}
+
+function saveProject(e) {
+  e.preventDefault()
+  const data = { name: $('.project-name').val() }
+  
+  
+  console.log(data)
+  fetch('http://localhost:3000/api/v1/projects', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  }).then(res => res.json())
+  .then(response => console.log('Success:', JSON.stringify(response)))
+  .catch(error => console.error('Error:', error));
 }
