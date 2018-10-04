@@ -91,4 +91,6 @@ function savePalette(e) {
   }).then(res => res.json())
   .then(response => JSON.stringify(response))
   .catch(error => console.error('Error:', error));
+
+  $('.palette-name').val('')
 }
