@@ -18,9 +18,9 @@ app.use(function(req, res, next) {
 });
 app.set('port', process.env.PORT || 3000)
 
-app.get('/', (request, response) => {
-  response.send('Hello World!')
-})
+// app.get('/', (request, response) => {
+//   response.send('Hello World!')
+// })
 
 app.get('/api/v1/projects', (request, response) => {
   database('projects').select()
