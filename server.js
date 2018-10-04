@@ -17,10 +17,7 @@ app.use(function(req, res, next) {
   next()
 });
 app.set('port', process.env.PORT || 3000)
-
-// app.get('/', (request, response) => {
-//   response.send('Hello World!')
-// })
+app.use(express.static('public'))
 
 app.get('/api/v1/projects', (request, response) => {
   database('projects').select()
