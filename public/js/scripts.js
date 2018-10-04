@@ -1,10 +1,11 @@
 $('.lock-img').on('click', toggleLock)
 $('.generate-btn').on('click', changePalettes)
 $('.save-project-btn').on('click', saveProject)
+$('.save-palette-btn').on('click', savePalette)
 $(window).on('load', changePalettes)
 $(window).on('load', retrieveProjects)
 
-// let projects = retrieveProjects()
+let globalProjects = ''
 
 function toggleLock(e) {
   $(e.target).toggleClass('hide-png')
@@ -63,5 +64,31 @@ function retrieveProjects() {
 }
 
 function populateProjectNames (projects) { 
+  globalProjects = projects
   $('.project-selector').html(projects.map(project =>`<option>${project.name}</option>`))
+}
+
+function savePalette(e) {
+  e.preventDefault()
+  const project = globalProjects.find(project => project.name === $('.project-selector').val())
+
+  const data = {
+    name: $('.palette-name').val(),
+    hex_one: $('.hex-1').text(),
+    hex_two: $('.hex-2').text(),
+    hex_three: $('.hex-3').text(),
+    hex_four: $('.hex-4').text(),
+    hex_five: $('.hex-5').text(),
+    project_id: project.id
+  }
+
+  fetch('http://localhost:3000/api/v1/palettes', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  }).then(res => res.json())
+  .then(response => JSON.stringify(response))
+  .catch(error => console.error('Error:', error));
 }
