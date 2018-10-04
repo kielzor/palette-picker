@@ -8,60 +8,62 @@
   <title>Document</title>
 </head>
 <body>
-  <header>
-    <div class='header-spacing'></div>
-    <h1>Palette Picker</h1> 
-    <button class='generate-btn'>Generate Palette</button>
-  </header>
-  <section class='generated-palettes'>
-    <div class='palette palette-1 unlocked'>
-      <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
-      <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
-    </div>
-    <div class='palette palette-2 unlocked'>
-       <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
-       <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
-    </div>
-    <div class='palette palette-3 unlocked'>
-      <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
-      <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
-    </div>
-    <div class='palette palette-4 unlocked'>
-      <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
-      <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
-    </div>
-    <div class='palette palette-5 unlocked'>
-      <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
-      <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
-    </div>
-  </section>
-  <section class='hex-codes'>
-    <p class='hex hex-1'></p>
-    <p class='hex hex-2'></p>
-    <p class='hex hex-3'></p>
-    <p class='hex hex-4'></p>
-    <p class='hex hex-5'></p>
-  </section>
-  <div class='bottom-section'>
-    <section class='form-container'>
-      <form class='save-palette'>
-        <h2>Save Palette From Above</h2>
-        <input class='palette-name' type="text" placeholder='Palette Name'>
-        <div class='palette-spacing'>
-          <select class='project-selector'>
-            <option>Select Project</option>
-          </select>
-          <button class='save-palette-btn'>Save</button>
+  <div class='full-page'>
+    <div class='main-section'>
+      <header>
+        <div class='header-spacing'></div>
+        <h1>Palette Picker</h1> 
+        <button class='generate-btn'>Generate Palette</button>
+      </header>
+      <section class='generated-palettes'>
+        <div class='palette palette-1 unlocked'>
+          <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+          <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
         </div>
-      </form>
-      <div class='save-project'>
-        <h2 class='project-header'>Save New Project</h2>
-        <form class='project-form'>
-          <input class='project-name' type="text" placeholder='Project Name'>
-          <button class='save-project-btn'>Save</button>
-        </form>
-      </div> 
-    </section>
+        <div class='palette palette-2 unlocked'>
+          <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+          <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+        </div>
+        <div class='palette palette-3 unlocked'>
+          <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+          <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+        </div>
+        <div class='palette palette-4 unlocked'>
+          <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+          <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+        </div>
+        <div class='palette palette-5 unlocked'>
+          <img class='lock-img' src="../images/002-padlock-unlock.png" alt="">
+          <img class='lock-img hide-png' src="../images/001-padlock.png" alt="">
+        </div>
+      </section>
+      <section class='hex-codes'>
+        <p class='hex hex-1' id='one'></p>
+        <p class='hex hex-2'></p>
+        <p class='hex hex-3'></p>
+        <p class='hex hex-4'></p>
+        <p class='hex hex-5'></p>
+      </section>
+      <div class='bottom-section'>
+        <section class='form-container'>
+          <form class='save-palette'>
+            <h2>Save Palette From Above</h2>
+            <input class='palette-name' type="text" placeholder='Palette Name'>
+            <div class='palette-spacing'>
+              <select class='project-selector'></select>
+              <button class='save-palette-btn'>Save</button>
+            </div>
+          </form>
+          <div class='save-project'>
+            <h2 class='project-header'>Save New Project</h2>
+            <form class='project-form'>
+              <input class='project-name' type="text" placeholder='Project Name'>
+              <button class='save-project-btn'>Save</button>
+            </form>
+          </div> 
+        </section>
+      </div>
+    </div>
     <section class='projects-container'>
       <h2>Projects</h2>
     </section>
