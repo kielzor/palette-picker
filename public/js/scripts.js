@@ -42,7 +42,7 @@ function saveProject(e) {
 
   const data = { name: $('.project-name').val() }
   
-  fetch('http://localhost:3000/api/v1/projects', {
+  fetch('/api/v1/projects', {
     method: 'POST',
     body: JSON.stringify(data),
     headers:{
@@ -57,7 +57,7 @@ function saveProject(e) {
 }
 
 function retrieveProjects() {
-  return fetch ('http://localhost:3000/api/v1/projects')
+  return fetch ('/api/v1/projects')
   .then(res => res.json())
   .then(response => populateProjectNames(response))
   .catch(error => console.error('Error:', error));
@@ -82,7 +82,7 @@ function savePalette(e) {
     project_id: project.id
   }
 
-  fetch('http://localhost:3000/api/v1/palettes', {
+  fetch('/api/v1/palettes', {
     method: 'POST',
     body: JSON.stringify(data),
     headers:{
