@@ -4,7 +4,6 @@ body {
 
 .full-page {
   display: flex;
-  width: 100%;
 }
 
 .main-section {
@@ -26,26 +25,54 @@ header {
   justify-content: space-around;
   align-items: center;
   margin: 1.25rem 0;
+  width: 100%
 }
 
-.header-spacing, .generate-btn {
+.header-spacing, .background {
   width: 8rem;
-  margin: 0 8%;
+  margin: 0 12%;
 }
 
-.generate-btn {
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 3rem;
   border-radius: 10%;
   outline: none;
-  color: white;
+  animation: wheelHueColor 10s infinite;
+  background-color: currentColor;
 }
 
-.generate-btn:hover {
+.generate-btn {
+  font-size: 14px;
+}
+
+@supports (background-blend-mode: overlay) {
+  .background {
+    background-image: linear-gradient(45deg, white 10%, black 90%);
+    background-blend-mode: overlay;
+  }
+}
+@keyframes wheelHueColor {
+  from, to { color: hsl(324, 70%, 45%); }
+  10%      { color: hsl(360, 65%, 45%); }
+  20%      { color: hsl( 36, 80%, 45%); }
+  30%      { color: hsl( 72, 75%, 35%); }
+  40%      { color: hsl(108, 65%, 35%); }
+  50%      { color: hsl(144, 75%, 35%); }
+  60%      { color: hsl(180, 75%, 35%); }
+  70%      { color: hsl(216, 60%, 45%); }
+  80%      { color: hsl(252, 65%, 50%); }
+  90%      { color: hsl(288, 60%, 40%); }
+}
+
+button:hover, .background:hover, .generate-btn {
   cursor: pointer;
 }
 
 .generated-palettes {
-  height: 30vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
 }
@@ -55,6 +82,7 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  border: .025px solid black;
 }
 
 .lock-img {
@@ -85,12 +113,13 @@ header {
 .bottom-section {
   display: flex;
   justify-content: center;
-  margin-top: 3vh;
+  margin-top: 5vh;
+  width: 100%;
 }
 
 .form-container {
-  height: 50vh;
-  width: 35%;
+  height: 33vh;
+  width: 37%;
   border-right: 1px solid white;
   padding-right: 2.5%;
 }
@@ -112,7 +141,6 @@ header {
   padding-bottom: 3rem;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid white;
   text-align: center;
   width: 100%;
 }
@@ -126,27 +154,28 @@ header {
 }
 
 .save-project {
+  width: 37%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.project-header {
-  margin-top: 3rem;
-}
-
 .project-form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 1rem;
-  width: 100%;
+  width: 90%;
 }
 
 .project-name {
-  width: 80%;
+  margin-top: .5rem;
+  width: 100%;
 }
 
 .save-project-btn {
-  width: 20%;
+  width: 50%;
+  margin-top: 1.25rem;
 }
 
 .projects-container {

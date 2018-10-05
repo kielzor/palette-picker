@@ -1,5 +1,5 @@
 $('.lock-img').on('click', toggleLock)
-$('.generate-btn').on('click', changePalettes)
+$('.background').on('click', changePalettes)
 $('.save-project-btn').on('click', saveProject)
 $('.save-palette-btn').on('click', savePalette)
 $(window).on('load', changePalettes)
@@ -17,8 +17,6 @@ function changePalettes() {
   for (let i = 1; i < 6; i++) {
     $('.palette-' + [i]).css('background-color', getRandomPalette(i))
   }
-
-  $('.generate-btn').css('background-color', getRandomPalette())
 }
 
 function getRandomPalette(i) {
@@ -32,7 +30,7 @@ function getRandomPalette(i) {
     color = color + randomInt
   }
   
-  if (i) $('.hex-' + i)[0].innerText = color
+  $('.hex-' + i)[0].innerText = color
   
   return color
 }
