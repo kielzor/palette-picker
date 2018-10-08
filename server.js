@@ -25,6 +25,12 @@ app.get('/api/v1/projects', (request, response) => {
     .catch(error => response.status(500).json({ error }));
 });
 
+app.get('/api/v1/palettes', (request, response) => {
+  database('palettes').select()
+    .then(palettes => response.status(200).json(palettes))
+    .catch(error => response.status(500).json({ error }))
+})
+
 app.listen(app.get('port'), () => {
   console.log(`App is running on ${app.get('port')}`)
 })
@@ -47,8 +53,8 @@ app.post('/api/v1/palettes', (request, response) => {
   const palette = request.body;
 
   for (let requiredParameter of ['name', 'hex_one', 'hex_two', 'hex_three', 'hex_four', 'hex_five'
-  , 'project_id'
-]) {
+    , 'project_id'
+  ]) {
     if (!palette[requiredParameter]) {
       return response.status(422).send({ error: `Expected format: { name: <String>, hex_one: <String>, two: <String>, hex_three: <String>, hex_four: <String>, hex_five: <String>, project_id: <Integer> }. You're missing a "${requiredParameter}" property.` })
     }

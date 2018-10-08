@@ -54,6 +54,7 @@ header {
     background-blend-mode: overlay;
   }
 }
+
 @keyframes wheelHueColor {
   from, to { color: hsl(324, 70%, 45%); }
   10%      { color: hsl(360, 65%, 45%); }
